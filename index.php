@@ -1,5 +1,5 @@
 <?php 
-echo "<h1>Hello Shahadat Khan</h1>";
+echo "<h1>Hello Shahadat M2-D2</h1>";
 $servername     = "kyc-db.mysql.database.azure.com";
 $dbusername     = "kycmaster";
 $dbpassword     = "fact2tension4outward!";
