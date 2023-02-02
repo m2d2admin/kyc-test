@@ -1,5 +1,5 @@
 <?php 
-echo "<h1>Hello Shahadat M2-D2</h1>";
+echo "<h1>Hello Shahadat M2-D2 Org</h1>";
 $servername     = "kyc-db.mysql.database.azure.com";
 $dbusername     = "kycmaster";
 $dbpassword     = "fact2tension4outward!";
@@ -12,15 +12,15 @@ $dbname         = "KYC_db";
 
 echo "<h3>db-configration</h3>";
 //Check connection
-$link = mysql_connect($servername, $dbusername, $dbpassword);
-if (!$link) {
-    die('Could not connect: ' . mysql_error());
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dbusername, $dbpassword);
+    echo "Connected to $dbname at $host successfully.";
+} catch (PDOException $pe) {
+    die ("Could not connect to the database $dbname :" . $pe->getMessage());
 }
-echo 'Connected successfully';
-mysql_close($link);
 
 echo "<h3>this is end</h3>";
-$action 	= $_REQUEST['action'];
+
 /*
 $qstr3 		    = "SELECT 
 fct_domain_monitoring.domain_url_id, fct_domain_monitoring.timestamp, fct_domain_monitoring.availability_indicator, fct_domain_monitoring.response_time 
