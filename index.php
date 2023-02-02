@@ -1,14 +1,16 @@
-<?php echo "<h1>Hello Shahadat Khan</h1>";
+<?php 
+echo "<h1>Hello Shahadat Khan</h1>";
 $servername     = "kyc-db.mysql.database.azure.com";
 $dbusername     = "kycmaster";
 $dbpassword     = "fact2tension4outward!";
-$dbname         = "kyc_db";
+$dbname         = "KYC_db";
 
 //Create connection
 $conn 	        = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
 global $conn;
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
+echo "<h3>db-configration</h3>";
 //Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
@@ -16,6 +18,7 @@ if ($conn->connect_error) {
     echo "Database Connected";
 }
 
+echo "<h3>this is end</h3>";
 $action 	= $_REQUEST['action'];
 /*
 $qstr3 		    = "SELECT 
