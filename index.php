@@ -3,7 +3,7 @@ echo "<h1>Hello Shahadat M2-D2 Org</h1>";
 $servername     = "kyc-db.mysql.database.azure.com";
 $dbusername     = "kycmaster";
 $dbpassword     = "fact2tension4outward!";
-$dbname         = "kyc-db";
+$dbname         = "KYC_db";
 
 //Create connection
 //$conn 	        = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
