@@ -6,17 +6,18 @@ $dbpassword     = "fact2tension4outward!";
 $dbname         = "KYC_db";
 
 //Create connection
-$conn 	        = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
-global $conn;
-mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+//$conn 	        = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
+//global $conn;
+//mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 echo "<h3>db-configration</h3>";
 //Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}else{
-    echo "Database Connected";
+$link = mysql_connect($servername, $dbusername, $dbpassword);
+if (!$link) {
+    die('Could not connect: ' . mysql_error());
 }
+echo 'Connected successfully';
+mysql_close($link);
 
 echo "<h3>this is end</h3>";
 $action 	= $_REQUEST['action'];
